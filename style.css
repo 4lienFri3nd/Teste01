@@ -1,14 +1,60 @@
+*{
+
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 body{
-	background-color: #111;
-	color:white;
-	text-align: center;
+	background: #0f0f0f;
 	font-family: Arial;
-	margin-top: 100px;
+	color: White;
+}
+/*FLEXBOX */
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+.card{
+	background: #1c1c1c;
+	padding: 40px;
+	border-radius: 20px;
+	text-align: center;
+	width: 400px;
+	box-shadow: 0 0 20px
+rgba(0,0,0,0,5);
+	/*ANIMAÇÃO*/
+	transition: 0.5s;
+}
+.card:hover{
+	transform: scale(1.05);
+}
+h1{
+	margin-bottom: 20px;
+}
+p{
+	margin-bottom: 20px;
+	color: #bdbdbd;
 }
 button{
-	background-color: red;
+	background: red;
 	color: white;
 	border: none;
-	padding: 10px 20px;
+	padding: 12px 25px;
+	border-radius: 10px;
 	cursor: pointer;
+	transition: 0.5s;
+}
+button:hover{
+	background: darkred;
+}
+/*RESPONSIVIDADE*/
+@media(max-widht:500px){
+	.card{
+		width:90px;
+	}
+	h1{
+		font-size:24px;
+	}
 }
